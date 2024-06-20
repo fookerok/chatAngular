@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<mat-chip-listbox>
+	<mat-chip class="chip" *ngFor="let file of files">
+		<p><span>{{ file.name }}</span> ({{ formatBytes(file.size) }})</p>
+		<mat-icon (click)="removeFile(file)">cancel</mat-icon>
+	</mat-chip>
+</mat-chip-listbox>
+

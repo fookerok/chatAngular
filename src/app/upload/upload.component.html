@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<div class="drop-zone" 
+  (dragover)="onDragOver($event)" 
+  (dragleave)="onDragLeave($event)" 
+  (drop)="onDrop($event)"
+  (click)="fileInput.click()">
+  Перетащите файлы сюда или нажмите для выбора файлов
+  <input type="file" (change)="onFileSelected($event)" #fileInput hidden>
+</div>
+
+

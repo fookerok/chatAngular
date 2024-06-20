@@ -1,0 +1,26 @@
+
+html, body { height: 100%; }
+body { 
+	margin: 0; 
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	background-color: #ffffff; 
+}
+.ql-editor{
+	background-color: white;
+	border: 1px solid #ccc;
+	min-height: 100px;
+	max-height: 150px;
+	overflow-y: auto;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: 0 auto;
+	max-width: 800px;
+}
+
+

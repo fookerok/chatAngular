@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="block-sms">
+    <button routerLink="/">Назад</button>
+    <div *ngFor="let message of sms" class="sms" [ngClass]="{'user': isMyMessage(message), 'left': !isMyMessage(message)}">
+      <div class="user" [ngClass]="{'left': !isMyMessage(message)}">{{ message.userName }}</div>
+      <div [innerHTML]="message.text"></div>
+      <div *ngIf="message.files && message.files.length > 0">
+        <mat-chip-listbox>
+          <mat-chip *ngFor="let file of message.files" class="file left">
+            <a [href]="getFileUrl(file)" download="{{ file.fileName }}">{{ file.fileName }}</a>
+          </mat-chip>
+        </mat-chip-listbox>
+      </div>
+      <div>
+        <span class="time">{{ message.date }}</span>
+        <img title="Отправлено" src="https://img.icons8.com/?size=100&id=98955&format=png&color=000000" alt="">
+      </div>
+    </div>
+  </div>
+  <app-files [files]="selectedFiles" (fileRemoved)="onFileRemoved($event)"></app-files>
+  <quill-editor class="chat" [(ngModel)]="name"></quill-editor>
+  <div class="bottom-panel">
+    <app-upload (filesSelected)="onFilesSelected($event)"></app-upload>
+    <button mat-button (click)="addItem()">Отправить сообщение</button>
+  </div>
+</div>

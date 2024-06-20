@@ -1,0 +1,40 @@
+mat-chip-listbox{
+	display: flex;
+	
+}
+
+.chip{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-color: #566371 !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+mat-icon{
+	position: absolute;
+	top: 13%;
+	left: 85%;
+	float: inline-end;
+	color: #eaf0f6;
+
+}
+p{
+	color: #eaf0f6;
+	padding-right:40px;
+	margin-top: 10px;
+}
+span{
+	float: left;
+}
+.file{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-color: #566371 !important;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}

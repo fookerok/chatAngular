@@ -1,0 +1,29 @@
+
+.drop-zone {
+	border: 2px dashed #ccc;
+	height: 48px;
+	border-radius: 10px;
+	width: 700px;
+	text-align: center;
+	cursor: pointer;
+	word-break: break-all;
+}
+
+.drop-zone.dragover {
+	background-color: #e0e0e0;
+}
+
+@media (max-width:900px) {
+	.drop-zone{
+		max-width: 320px;
+	}
+}
+
+@media (max-width:700px),(max-width:600px),(max-width:500px) {
+	.drop-zone{
+		max-width: 160px;
+		height: 80px;
+	}
+}
+
+

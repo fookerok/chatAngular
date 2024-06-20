@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<div class="container">
+  <div *ngFor="let message of messages" class="message" [routerLink]="['/message', message.id]">
+    <h3>{{ message.subject }}</h3>
+    
+    <p>{{ message.sms[message.sms.length - 1].userName }}: {{ message.sms[message.sms.length - 1].text }}</p>
+    
+    <span> {{ message.sms[message.sms.length - 1].date }}</span>
+  </div>
+</div>
