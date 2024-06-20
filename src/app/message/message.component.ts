@@ -62,7 +62,7 @@ export class MessageComponent implements OnInit, OnDestroy {
   }
 
   isMyMessage(message: ISms): boolean {
-    return message.isMy; // Используем поле isMy из данных
+    return message.isMy;
   }
 
   onFilesSelected(files: File[]) {
@@ -74,7 +74,7 @@ export class MessageComponent implements OnInit, OnDestroy {
   }
 
   getFileUrl(file: IFiles): string {
-    // Временно создаем объект URL, этот URL будет работать только в текущей сессии
+    
     return URL.createObjectURL(new File([], file.fileName));
   }
 }
